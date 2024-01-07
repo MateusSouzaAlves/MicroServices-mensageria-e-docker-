@@ -3,7 +3,6 @@ package br.com.mateussouza.msclientes.application;
 import br.com.mateussouza.msclientes.domain.Cliente;
 import br.com.mateussouza.msclientes.infra.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -21,6 +20,6 @@ public class ClienteService {
     }
 
     public Optional<Cliente> getByCPF(String cpf){
-        return repository.findByCPF(cpf);
+        return repository.findByCpf(cpf);
     }
 }
