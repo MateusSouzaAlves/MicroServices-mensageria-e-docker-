@@ -4,8 +4,8 @@ import br.com.mateussouza.msclientes.domain.Cliente;
 import br.com.mateussouza.msclientes.infra.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
@@ -16,10 +16,12 @@ public class ClienteService {
 
     @Transactional
     public Cliente save(Cliente cliente) {
+
         return repository.save(cliente);
     }
 
     public Optional<Cliente> getByCPF(String cpf){
+
         return repository.findByCpf(cpf);
     }
 }
