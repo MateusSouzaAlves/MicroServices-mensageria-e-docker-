@@ -2,9 +2,7 @@ package br.com.mateussouza.msavaliadorcredito.application;
 
 import br.com.mateussouza.msavaliadorcredito.application.ex.DadosClienteNotFoundException;
 import br.com.mateussouza.msavaliadorcredito.application.ex.ErroComunicacaoMicroservicesException;
-import br.com.mateussouza.msavaliadorcredito.domain.model.CartaoCliente;
-import br.com.mateussouza.msavaliadorcredito.domain.model.DadosCliente;
-import br.com.mateussouza.msavaliadorcredito.domain.model.SituacaoCliente;
+import br.com.mateussouza.msavaliadorcredito.domain.model.*;
 import br.com.mateussouza.msavaliadorcredito.infra.clients.CartoesResourceClient;
 import br.com.mateussouza.msavaliadorcredito.infra.clients.ClienteResourceClient;
 import feign.FeignException;
@@ -13,7 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -43,5 +43,40 @@ public class AvaliadorCreditoService {
         }
     }
 
+    public RetornoAvaliacaoCliente realizarAvaliacao(String cpf, Long renda)
+            throws DadosClienteNotFoundException, ErroComunicacaoMicroservicesException{
+        try{
+            ResponseEntity<DadosCliente> dadosClienteResponse  =  clientesClient.dadosCliente(cpf);
+            ResponseEntity<List<Cartao>> cartoesResponse = cartoesClient.getCartoesRendaAte(renda);
+
+            List<Cartao> cartoes = cartoesResponse.getBody();
+            var listaCartoesAprovados = cartoes.stream().map(cartao -> {
+
+                DadosCliente dadosCliente = dadosClienteResponse.getBody();
+
+                BigDecimal limiteBase = cartao.getLimiteBase();
+                BigDecimal idadeBD = BigDecimal.valueOf(dadosCliente.getIdade());
+                var fator = idadeBD.divide(BigDecimal.valueOf(10));
+                BigDecimal limeteAprovado = fator.multiply(limiteBase);
+
+
+                CartaoAprovado aprovado = new CartaoAprovado();
+                aprovado.setCartao(cartao.getNome());
+                aprovado.setBandeira(cartao.getBandeira());
+                aprovado.setLimiteAprovado(limeteAprovado);
+
+                return aprovado;
+            }).collect(Collectors.toList());
+
+            return new RetornoAvaliacaoCliente(listaCartoesAprovados);
+
+        }catch (FeignException.FeignClientException e){
+            int status = e.status();
+            if (HttpStatus.NOT_FOUND.value() == status){
+                throw new DadosClienteNotFoundException();
+            }
+            throw new ErroComunicacaoMicroservicesException(e.getMessage(), status);
+        }
+    }
 
 }
