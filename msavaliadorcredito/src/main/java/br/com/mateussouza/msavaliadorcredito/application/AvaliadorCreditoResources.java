@@ -2,9 +2,8 @@ package br.com.mateussouza.msavaliadorcredito.application;
 
 import br.com.mateussouza.msavaliadorcredito.application.ex.DadosClienteNotFoundException;
 import br.com.mateussouza.msavaliadorcredito.application.ex.ErroComunicacaoMicroservicesException;
-import br.com.mateussouza.msavaliadorcredito.domain.model.DadosAvaliacao;
-import br.com.mateussouza.msavaliadorcredito.domain.model.RetornoAvaliacaoCliente;
-import br.com.mateussouza.msavaliadorcredito.domain.model.SituacaoCliente;
+import br.com.mateussouza.msavaliadorcredito.application.ex.ErroSolicitacaoCartaoException;
+import br.com.mateussouza.msavaliadorcredito.domain.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class AvaliadorCreditoResources {
     }
 
     @GetMapping(value = "situacao-cliente", params = "cpf")
-    public ResponseEntity<?> consultaSituacaoCliente(@RequestParam("cpf") String cpf){
+    public ResponseEntity<?> consultarSituacaoCliente(@RequestParam("cpf") String cpf){
         try {
            SituacaoCliente situacaoCliente = avaliadorCreditoService.obterSituacaoCliente(cpf);
             return ResponseEntity.ok(situacaoCliente);
@@ -45,6 +44,17 @@ public class AvaliadorCreditoResources {
             return ResponseEntity.notFound().build();
         } catch (ErroComunicacaoMicroservicesException e) {
             return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
+        }
+    }
+
+    @PostMapping("solicitacoes-cartao")
+    public ResponseEntity solicitarCartao(@RequestBody DadosSolicitacaoEmissaoCartao dados){
+        try {
+            ProtocoloSolicitacaoCartao protocoloSolicitacaoCartaoo = avaliadorCreditoService
+                    .solicitacaoCartaoolicitarEmissaodeCartao(dados);
+            return ResponseEntity.ok(protocoloSolicitacaoCartaoo);
+        }catch (ErroSolicitacaoCartaoException e){
+            return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
 }
