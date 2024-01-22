@@ -47,7 +47,7 @@ public class AvaliadorCreditoResources {
         }
     }
 
-    @PostMapping("solicitacoes-cartao")
+    @PostMapping("/solicitacoes-cartao")
     public ResponseEntity solicitarCartao(@RequestBody DadosSolicitacaoEmissaoCartao dados){
         try {
             ProtocoloSolicitacaoCartao protocoloSolicitacaoCartaoo = avaliadorCreditoService

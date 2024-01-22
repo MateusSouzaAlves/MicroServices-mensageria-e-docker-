@@ -68,6 +68,7 @@ public class AvaliadorCreditoService {
                 aprovado.setBandeira(cartao.getBandeira());
                 aprovado.setLimiteAprovado(limeteAprovado);
 
+
                 return aprovado;
             }).collect(Collectors.toList());
 
