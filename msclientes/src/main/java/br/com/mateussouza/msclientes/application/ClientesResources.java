@@ -16,6 +16,7 @@ import java.net.URI;
 @Slf4j
 public class ClientesResources {
 
+    //private static final Logger log = LoggerFactory.getLogger(ClientesResource.class);
     private final ClienteService service;
 
     @GetMapping
