@@ -1,49 +1,168 @@
-2024-01-25 14:57:40.481  INFO 23424 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 17.0.9 on DESKTOP-JHCN4JF with PID 23424 (C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito\target\classes started by mateu in C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito)
-2024-01-25 14:57:40.482  INFO 23424 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-01-25 14:57:40.515  INFO 23424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-01-25 14:57:40.522  INFO 23424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-01-25 14:57:41.254  INFO 23424 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ace836f0-04db-35b6-989c-ed9f5c6f8111
-2024-01-25 14:57:41.582  INFO 23424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2024-01-25 14:57:41.588  INFO 23424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-01-25 14:57:41.588  INFO 23424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
-2024-01-25 14:57:41.665  INFO 23424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-01-25 14:57:41.666  INFO 23424 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1143 ms
-2024-01-25 14:57:41.887  WARN 23424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-01-25 14:57:41.924  INFO 23424 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
-2024-01-25 14:57:41.968  INFO 23424 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
-2024-01-25 14:57:42.545  INFO 23424 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-01-25 14:57:42.575  WARN 23424 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-01-25 14:57:42.579  INFO 23424 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
-2024-01-25 14:57:42.664  INFO 23424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56110 (http) with context path ''
-2024-01-25 14:57:42.665  INFO 23424 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 56110
-2024-01-25 14:57:42.668  INFO 23424 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-01-25 14:57:42.693  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-01-25 14:57:42.697  INFO 23424 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-01-25 14:57:42.713  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-01-25 14:57:42.714  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-01-25 14:57:42.950  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-01-25 14:57:42.952  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-01-25 14:57:42.953  INFO 23424 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-01-25 14:57:42.956  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1706205462956 with initial instances count: 4
-2024-01-25 14:57:42.957  INFO 23424 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
-2024-01-25 14:57:42.958  INFO 23424 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706205462958, current=UP, previous=STARTING]
-2024-01-25 14:57:42.959  INFO 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f: registering service...
-2024-01-25 14:57:42.992  INFO 23424 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 2.851 seconds (JVM running for 3.414)
-2024-01-25 14:57:43.043  INFO 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f - registration status: 204
-2024-01-25 14:57:43.187  INFO 23424 --- [RMI TCP Connection(4)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2024-01-25 14:57:43.188  INFO 23424 --- [RMI TCP Connection(3)-192.168.0.105] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-01-25 14:57:43.188  INFO 23424 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-01-25 14:57:43.189  INFO 23424 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-01-25 14:57:43.226  INFO 23424 --- [RMI TCP Connection(4)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#8dea38a:0/SimpleConnection@4bfffaae [delegate=amqp://guest@127.0.0.1:5672/, localPort= 56116]
-2024-01-25 14:59:16.481  INFO 23424 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN
-2024-01-25 14:59:16.482  INFO 23424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706205556482, current=DOWN, previous=UP]
-2024-01-25 14:59:16.482  INFO 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f: registering service...
-2024-01-25 14:59:16.492  INFO 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/} exception=I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:40:28.054  INFO 4984 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 17.0.9 on DESKTOP-JHCN4JF with PID 4984 (C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito\target\classes started by mateu in C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito)
+2024-01-26 00:40:28.060  INFO 4984 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-01-26 00:40:28.116  INFO 4984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-26 00:40:28.117  INFO 4984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-26 00:40:29.226  INFO 4984 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56539fde-4393-3d18-bfab-5096961c09f3
+2024-01-26 00:40:29.673  INFO 4984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-01-26 00:40:29.683  INFO 4984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-26 00:40:29.684  INFO 4984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2024-01-26 00:40:29.786  INFO 4984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-26 00:40:29.787  INFO 4984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1669 ms
+2024-01-26 00:40:30.367  WARN 4984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-01-26 00:40:30.433  INFO 4984 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 00:40:30.514  INFO 4984 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 00:40:31.579  INFO 4984 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-01-26 00:40:31.606  WARN 4984 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-01-26 00:40:31.610  INFO 4984 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2024-01-26 00:40:31.683  INFO 4984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56422 (http) with context path ''
+2024-01-26 00:40:31.684  INFO 4984 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 56422
+2024-01-26 00:40:31.687  INFO 4984 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-01-26 00:40:31.709  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-01-26 00:40:31.713  INFO 4984 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-01-26 00:40:31.726  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-01-26 00:40:31.726  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-01-26 00:40:31.726  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-01-26 00:40:31.726  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-01-26 00:40:31.727  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-01-26 00:40:31.727  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-01-26 00:40:31.727  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-01-26 00:40:31.966  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-01-26 00:40:31.968  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-01-26 00:40:31.970  INFO 4984 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-01-26 00:40:31.973  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1706240431972 with initial instances count: 3
+2024-01-26 00:40:31.974  INFO 4984 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
+2024-01-26 00:40:31.974  INFO 4984 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706240431974, current=UP, previous=STARTING]
+2024-01-26 00:40:31.975  INFO 4984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:01a094ca2d7a498a9d0002fcc8ad566b: registering service...
+2024-01-26 00:40:32.008  INFO 4984 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 4.493 seconds (JVM running for 5.419)
+2024-01-26 00:40:32.058  INFO 4984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:01a094ca2d7a498a9d0002fcc8ad566b - registration status: 204
+2024-01-26 00:40:32.109  INFO 4984 --- [RMI TCP Connection(9)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-01-26 00:40:32.110  INFO 4984 --- [RMI TCP Connection(10)-192.168.0.105] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-26 00:40:32.110  INFO 4984 --- [RMI TCP Connection(10)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-26 00:40:32.111  INFO 4984 --- [RMI TCP Connection(10)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-26 00:40:32.117  WARN 4984 --- [RMI TCP Connection(9)-192.168.0.105] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2172) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2145) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2125) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor118.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.13.1.jar:5.13.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223) ~[amqp-client-5.13.1.jar:5.13.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173) ~[amqp-client-5.13.1.jar:5.13.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	... 49 common frames omitted
+
+2024-01-26 00:41:20.509  INFO 4984 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN
+2024-01-26 00:41:20.509  INFO 4984 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706240480509, current=DOWN, previous=UP]
+2024-01-26 00:41:20.509  INFO 4984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:01a094ca2d7a498a9d0002fcc8ad566b: registering service...
+2024-01-26 00:41:20.527  INFO 4984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:01a094ca2d7a498a9d0002fcc8ad566b - registration status: 204
+2024-01-26 00:41:20.532  INFO 4984 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-01-26 00:41:23.535  INFO 4984 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-01-26 00:41:23.553  INFO 4984 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:01a094ca2d7a498a9d0002fcc8ad566b - deregister  status: 200
+2024-01-26 00:41:23.556  INFO 4984 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-01-26 00:41:26.394  INFO 10656 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 17.0.9 on DESKTOP-JHCN4JF with PID 10656 (C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito\target\classes started by mateu in C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito)
+2024-01-26 00:41:26.395  INFO 10656 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-01-26 00:41:26.428  INFO 10656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-26 00:41:26.428  INFO 10656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-26 00:41:27.244  INFO 10656 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56539fde-4393-3d18-bfab-5096961c09f3
+2024-01-26 00:41:27.573  INFO 10656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-01-26 00:41:27.580  INFO 10656 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-26 00:41:27.581  INFO 10656 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2024-01-26 00:41:27.657  INFO 10656 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-26 00:41:27.657  INFO 10656 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2024-01-26 00:41:27.915  WARN 10656 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-01-26 00:41:27.952  INFO 10656 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 00:41:27.996  INFO 10656 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 00:41:28.783  INFO 10656 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-01-26 00:41:28.811  WARN 10656 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-01-26 00:41:28.816  INFO 10656 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2024-01-26 00:41:28.896  INFO 10656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56622 (http) with context path ''
+2024-01-26 00:41:28.896  INFO 10656 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 56622
+2024-01-26 00:41:28.899  INFO 10656 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-01-26 00:41:28.924  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-01-26 00:41:28.929  INFO 10656 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-01-26 00:41:28.944  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-01-26 00:41:28.945  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-01-26 00:41:29.176  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-01-26 00:41:29.178  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-01-26 00:41:29.180  INFO 10656 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-01-26 00:41:29.183  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1706240489182 with initial instances count: 5
+2024-01-26 00:41:29.184  INFO 10656 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
+2024-01-26 00:41:29.184  INFO 10656 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706240489184, current=UP, previous=STARTING]
+2024-01-26 00:41:29.185  INFO 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12: registering service...
+2024-01-26 00:41:29.216  INFO 10656 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 3.16 seconds (JVM running for 3.699)
+2024-01-26 00:41:29.271  INFO 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12 - registration status: 204
+2024-01-26 00:41:29.281  INFO 10656 --- [RMI TCP Connection(2)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-01-26 00:41:29.283  INFO 10656 --- [RMI TCP Connection(3)-192.168.0.105] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-26 00:41:29.283  INFO 10656 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-26 00:41:29.285  INFO 10656 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-26 00:41:29.329  INFO 10656 --- [RMI TCP Connection(2)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3b6e420:0/SimpleConnection@5c5c23b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 56627]
+2024-01-26 00:43:25.159  INFO 10656 --- [http-nio-auto-1-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 94 ms
+2024-01-26 00:44:10.136  INFO 10656 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN
+2024-01-26 00:44:10.136  INFO 10656 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706240650136, current=DOWN, previous=UP]
+2024-01-26 00:44:10.137  INFO 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12: registering service...
+2024-01-26 00:44:10.141  INFO 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/} exception=I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
@@ -99,8 +218,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 40 more
 
-2024-01-25 14:59:16.493  WARN 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2024-01-25 14:59:16.507  INFO 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/}, exception=I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:44:10.142  WARN 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:44:10.149  INFO 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/}, exception=I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
@@ -157,8 +276,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 41 more
 
-2024-01-25 14:59:16.508  WARN 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2024-01-25 14:59:16.513  WARN 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f - registration failed Cannot execute request on any known server
+2024-01-26 00:44:10.150  WARN 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:44:10.152  WARN 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
@@ -176,7 +295,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-2024-01-25 14:59:16.515  WARN 23424 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2024-01-26 00:44:10.153  WARN 10656 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
@@ -194,9 +313,9 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-2024-01-25 14:59:16.517  INFO 23424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2024-01-25 14:59:19.530  INFO 23424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2024-01-25 14:59:19.535  INFO 23424 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:44:10.165  INFO 10656 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-01-26 00:44:13.178  INFO 10656 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-01-26 00:44:13.183  INFO 10656 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
@@ -271,8 +390,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 59 more
 
-2024-01-25 14:59:19.535  WARN 23424 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2024-01-25 14:59:19.536 ERROR 23424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:d63551d36f3b3b7b2e7679d746818b7f - de-registration failedCannot execute request on any known server
+2024-01-26 00:44:13.184  WARN 10656 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://cursoms-eureka-user:reemaskrrs-oc-useuu@localhost:8761/eureka/apps/MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-01-26 00:44:13.185 ERROR 10656 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:7366070c9c120694d54c482b37dbdc12 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
@@ -308,4 +427,130 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.6.7.jar:2.6.7]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-2024-01-25 14:59:19.539  INFO 23424 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-01-26 00:44:13.187  INFO 10656 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-01-26 13:29:59.882  INFO 14772 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Starting MsavaliadorcreditoApplication using Java 17.0.9 on DESKTOP-JHCN4JF with PID 14772 (C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito\target\classes started by mateu in C:\Users\mateu\OneDrive\Área de Trabalho\Projetos_Dev\MS Avançado\msavaliadorcredito)
+2024-01-26 13:29:59.883  INFO 14772 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-01-26 13:29:59.929  INFO 14772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-26 13:29:59.929  INFO 14772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-26 13:30:01.065  INFO 14772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56539fde-4393-3d18-bfab-5096961c09f3
+2024-01-26 13:30:01.568  INFO 14772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-01-26 13:30:01.577  INFO 14772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-26 13:30:01.578  INFO 14772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2024-01-26 13:30:01.717  INFO 14772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-26 13:30:01.718  INFO 14772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1789 ms
+2024-01-26 13:30:02.135  INFO 14772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-26 13:30:02.186  INFO 14772 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 13:30:02.249  INFO 14772 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2024-01-26 13:30:03.458  INFO 14772 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-01-26 13:30:03.491  WARN 14772 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-01-26 13:30:03.497  INFO 14772 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2024-01-26 13:30:03.587  INFO 14772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50748 (http) with context path ''
+2024-01-26 13:30:03.588  INFO 14772 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 50748
+2024-01-26 13:30:03.591  INFO 14772 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-01-26 13:30:03.617  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-01-26 13:30:03.625  INFO 14772 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-01-26 13:30:03.645  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-01-26 13:30:03.646  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-01-26 13:30:04.172  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-01-26 13:30:04.174  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-01-26 13:30:04.176  INFO 14772 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-01-26 13:30:04.183  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1706286604182 with initial instances count: 0
+2024-01-26 13:30:04.185  INFO 14772 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAVALIADORCREDITO with eureka with status UP
+2024-01-26 13:30:04.186  INFO 14772 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706286604186, current=UP, previous=STARTING]
+2024-01-26 13:30:04.188  INFO 14772 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:46053901175afb7e0a6d56688ef51c80: registering service...
+2024-01-26 13:30:04.232  INFO 14772 --- [restartedMain] b.c.m.m.MsavaliadorcreditoApplication    : Started MsavaliadorcreditoApplication in 4.817 seconds (JVM running for 5.706)
+2024-01-26 13:30:04.413  INFO 14772 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:46053901175afb7e0a6d56688ef51c80 - registration status: 204
+2024-01-26 13:30:04.725  INFO 14772 --- [RMI TCP Connection(4)-192.168.0.105] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-01-26 13:30:04.733  INFO 14772 --- [RMI TCP Connection(3)-192.168.0.105] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-26 13:30:04.733  INFO 14772 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-26 13:30:04.735  INFO 14772 --- [RMI TCP Connection(3)-192.168.0.105] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-26 13:30:04.740  WARN 14772 --- [RMI TCP Connection(4)-192.168.0.105] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2172) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2145) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2125) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor119.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.13.1.jar:5.13.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223) ~[amqp-client-5.13.1.jar:5.13.1]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173) ~[amqp-client-5.13.1.jar:5.13.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	... 49 common frames omitted
+
+2024-01-26 13:30:34.175  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-01-26 13:30:34.175  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-01-26 13:30:34.176  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-01-26 13:30:34.176  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-01-26 13:30:34.176  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-01-26 13:30:34.176  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-01-26 13:30:34.176  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-01-26 13:30:34.212  INFO 14772 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-01-26 13:32:06.593  INFO 14772 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN
+2024-01-26 13:32:06.594  INFO 14772 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1706286726594, current=DOWN, previous=UP]
+2024-01-26 13:32:06.594  INFO 14772 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:46053901175afb7e0a6d56688ef51c80: registering service...
+2024-01-26 13:32:06.615  INFO 14772 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:46053901175afb7e0a6d56688ef51c80 - registration status: 204
+2024-01-26 13:32:06.622  INFO 14772 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-01-26 13:32:09.636  INFO 14772 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-01-26 13:32:09.652  INFO 14772 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:46053901175afb7e0a6d56688ef51c80 - deregister  status: 200
+2024-01-26 13:32:09.655  INFO 14772 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
