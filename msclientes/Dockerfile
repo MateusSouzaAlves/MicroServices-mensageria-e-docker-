@@ -7,7 +7,6 @@ FROM openjdk:17
 WORKDIR /app
 COPY --from=build ./app/target/*.jar ./app.jar
 
-ARG RABBITMQ_SERVER=rabbitmq-host
 ARG EUREKA_SERVER=localhost
 
 ENTRYPOINT java -jar app.jar
